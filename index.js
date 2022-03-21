@@ -61,7 +61,7 @@ function isApproved(mean){
  * @returns Uma descrição da data informada
  */
 function wide(strDate){
-    if(!("/" in strDate)){return "";}
+    if(!(strDate.includes("/"))){return "";}
     meses =["janeiro", "fevereiro", "março", "abril", "Maio", "junho", "agosto", "outubro", "novembro", "dezembro"]
     l = strDate.split("/");
     l[1] = meses[Number(l[1])-1];
