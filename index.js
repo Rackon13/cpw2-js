@@ -6,14 +6,14 @@
  * @returns Um array com os nomes invertidos
  */
 function invert(people){
-
+    if(people.lenght===0){return []}
     // TODO
     // 1) Peça ao usuário para digitar vários nomes. Exiba na tela
     // todos os nomes digitados, porém de maneira invertida (do último para o primeiro).
     // Uma dica, você pode utilizar a função prompt para permitir que o usuário digite os
     // nomes dos usuários.
 
-    return [];
+    return people.reverse();
 }
 
 /**
