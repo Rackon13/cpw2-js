@@ -34,7 +34,7 @@ function mean(grades){
     // o nome do aluno, sua média e se ele foi aprovado, sabendo-se que a média para aprovação é igual
     // ou superior a 7.
 
-    return x/grades.lenght;
+    return x/3;
 }
 
 /**
@@ -62,7 +62,7 @@ function isApproved(mean){
  */
 function wide(strDate){
     if(!(strDate.includes("/"))){return "";}
-    meses =["janeiro", "fevereiro", "março", "abril", "Maio", "junho", "agosto", "outubro", "novembro", "dezembro"]
+    meses =["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
     l = strDate.split("/");
     l[1] = meses[Number(l[1])-1];
     f = `${l[0]} de ${l[1]} de ${l[2]}`;
