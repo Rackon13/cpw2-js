@@ -6,14 +6,11 @@
  * @returns Um array com os nomes invertidos
  */
 function invert(people){
-    if(people.lenght===0){return []}
-    // TODO
-    // 1) Peça ao usuário para digitar vários nomes. Exiba na tela
-    // todos os nomes digitados, porém de maneira invertida (do último para o primeiro).
-    // Uma dica, você pode utilizar a função prompt para permitir que o usuário digite os
-    // nomes dos usuários.
+    let x;
+    if(people.lenght===0){x = []}
+    else {x = people.reverse()}
 
-    return people.reverse();
+    return x;
 }
 
 /**
@@ -23,18 +20,16 @@ function invert(people){
  * @returns Uma média a partir do array de notas
  */
 function mean(grades){
-    if(grades.lenght===0){return 0;}
-    var x = 0;
-    grades.forEach(element => {
-        x += element;
-    });
+    let x;
+    if(grades.lenght===0){x = 0;}
+    else {
+        grades.forEach(element => {
+            x += element;
+        })
+        x /=3;
+    }
     
-    // TODO
-    // 2) Faça um programa que leia o nome e as três notas de uma disciplina de um aluno e ao final escreva
-    // o nome do aluno, sua média e se ele foi aprovado, sabendo-se que a média para aprovação é igual
-    // ou superior a 7.
-
-    return x/3;
+    return x;
 }
 
 /**
@@ -44,14 +39,11 @@ function mean(grades){
  * @returns Uma string dizendo se um estudante está aprovado ou não
  */
 function isApproved(mean){
+    let x;
+    if(mean>=7){x = "aprovado"}
+    else {x = "reprovado"}
 
-    if(mean>=7){return "aprovado"}
-    // TODO
-    // 2.1) Faça um programa que leia o nome e as três notas de uma disciplina de um aluno e ao final escreva
-    // o nome do aluno, sua média e se ele foi aprovado, sabendo-se que a média para aprovação é igual
-    // ou superior a 7.
-
-    return "reprovado";
+    return x;
 }
 
 /**
@@ -61,18 +53,16 @@ function isApproved(mean){
  * @returns Uma descrição da data informada
  */
 function wide(strDate){
-    if(!(strDate.includes("/"))){return "";}
     meses =["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
-    l = strDate.split("/");
-    l[1] = meses[Number(l[1])-1];
-    f = `${l[0]} de ${l[1]} de ${l[2]}`;
-    // TODO
-    // 3) Faça um script que receba uma data no formato “dd/mm/aaaa” e escreva a data por extenso,
-    // por exemplo, de "03/03/2022" para "03 de março de 2022". Dica: use a função
-    // “split” de uma string que quebra a string em pedaços dado um separador como argumento da função.
-    // Nesse caso, o separador é a barra (/) da data.
+    let x;
+    if(!(strDate.includes("/"))){x = "";}
+    else {
+        l = strDate.split("/");
+        l[1] = meses[Number(l[1])-1];
+        x = `${l[0]} de ${l[1]} de ${l[2]}`; 
+    }
 
-    return f;
+    return x;
 }
 
 // Trecho utilizado pelos testes
