@@ -23,6 +23,7 @@ function mean(grades){
     let x;
     if(grades.lenght===0){x = 0;}
     else {
+        x = 0;
         grades.forEach(element => {
             x += element;
         })
